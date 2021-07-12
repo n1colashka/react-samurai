@@ -1,0 +1,25 @@
+.title {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: rgb(15, 71, 145);
+    color: #fff;
+    border-radius: 15px;
+    padding: 12px 40px;
+    display: inline-block;
+    border: none;
+    text-transform: uppercase;
+}
+

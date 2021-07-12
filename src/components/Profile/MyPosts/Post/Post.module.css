@@ -1,0 +1,6 @@
+.item {
+    display: flex;
+}
+.item img {
+    width: 50px;
+}

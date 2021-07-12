@@ -1,0 +1,18 @@
+.page-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.content {
+    width: 100%;
+    padding-left: 15px;
+}
+
