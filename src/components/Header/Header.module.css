@@ -1,7 +1,15 @@
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(89, 185, 230);
+    padding: 0 15px;
 }
 
 .logo {
     width: 100px;
+}
+
+.login {
+    font-size: 20px;
 }

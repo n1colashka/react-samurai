@@ -1,23 +1,32 @@
-import classes from "./Sidebar.module.css";
+import { NavLink } from "react-router-dom";
+import Friends from "./Friends/Friends";
+import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
-        <nav className={classes.sidebar}>
+        <nav className={styles.sidebar}>
             <ul>
-                <li className={classes.item}>
-                    <a href="#s">Profile</a>
+                <li className={styles.item}>
+                    <NavLink to="/profile" activeClassName={styles.active}>Profile</NavLink>
                 </li>
-                <li className={classes.item}>
-                    <a href="#s">Messages</a>
+                <li className={styles.item}>
+                    <NavLink to="/messages" activeClassName={styles.active}>Messages</NavLink>
                 </li>
-                <li className={classes.item}>
-                    <a href="#s">News</a>
+                <li className={styles.item}>
+                    <NavLink to="/news" activeClassName={styles.active}>News</NavLink>
                 </li>
-                <li className={classes.item}>
-                    <a href="#s">Music</a>
+                <li className={styles.item}>
+                    <NavLink to="/music" activeClassName={styles.active}>Music</NavLink>
                 </li>
-                <li className={classes.item}>
-                    <a href="#s">Settings</a>
+                <li className={styles.item}>
+                    <NavLink to="/settings" activeClassName={styles.active}>Settings</NavLink>
+                </li>
+                <li className={styles.item}>
+                    <NavLink to="/users" activeClassName={styles.active}>Find users</NavLink>
+                </li>
+                <li className={styles.item}>
+                    <NavLink to="/friends" activeClassName={styles.active}>Friends</NavLink>
+                    <Friends items={props.state.friends} />
                 </li>
             </ul>
         </nav>

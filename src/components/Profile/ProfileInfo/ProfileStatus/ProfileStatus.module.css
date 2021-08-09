@@ -1,0 +1,17 @@
+.statusWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.statusCaption {
+    margin-right: 5px;
+    height: 21px;
+}
+
+.statusWrapper form {
+    height: 21px;
+}
+
+.statusContent {
+    height: 21px;
+}

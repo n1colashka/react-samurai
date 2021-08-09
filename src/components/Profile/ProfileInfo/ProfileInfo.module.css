@@ -1,0 +1,30 @@
+.body {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    padding-right: 15px;
+}
+
+.avatar img {
+    width: 200px;
+}
+
+.about {
+    padding: 15px;
+    line-height: 1.2;
+}
+
+.about p {
+    margin: 10px 0;
+}
+
+.background {
+    margin-bottom: 15px;
+}
+
+.background img {
+    width: 100%;
+    height: 200px;
+}

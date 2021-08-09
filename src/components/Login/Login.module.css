@@ -1,0 +1,10 @@
+.form {}
+.item {}
+.error {}
+.invalid {}
+.form .invalid {
+    border-color: red;
+}
+.formStatus {
+    margin-bottom: 20px;
+}

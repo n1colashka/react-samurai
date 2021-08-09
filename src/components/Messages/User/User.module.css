@@ -1,0 +1,19 @@
+.user {}
+
+.user a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.user a.active {
+    background-color: rgb(226, 168, 168);
+    font-weight: 700;
+}
+
+.user img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}

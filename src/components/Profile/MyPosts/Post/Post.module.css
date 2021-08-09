@@ -1,6 +1,30 @@
 .item {
     display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.item:last-child {
+    margin-bottom: 0;
 }
 .item img {
     width: 50px;
+}
+
+.text {
+    padding: 5px 15px;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.like span {
+    color: rgb(235, 115, 181);
+}
+
+.like img {
+    width: 20px;
+    margin-left: 5px;
 }

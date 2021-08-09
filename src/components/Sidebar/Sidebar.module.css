@@ -17,3 +17,7 @@
 .item:last-child {
     margin-top: 30px;
 }
+
+.item a.active {
+    color: #1924a7;
+}

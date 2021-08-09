@@ -1,0 +1,17 @@
+.message {
+    padding: 15px;
+    word-break: break-word;
+}
+
+.message.i {
+    text-align: right;
+    background-color: rgb(234 248 255);
+}
+
+.message.me {
+    text-align: left;
+}
+
+.messageWrapper {
+    display: flex;
+}

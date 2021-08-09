@@ -1,22 +1,11 @@
-import styles from "./Profile.module.css";
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+const Profile = (props) => {
     return (
-        <div className={`content ${styles.profile}`}>
-            <div className={styles.background}>
-                <img
-                    src="https://images.pexels.com/photos/5133461/pexels-photo-5133461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt=""
-                />
-            </div>
-            <div className={styles.body}>
-                <div className={styles.avatar}>
-                    <img src="https://schoolsw3.com/tryit/avatar.png" alt="" />
-                </div>
-                <div className={styles.info}>Age: 22</div>
-            </div>
-            <MyPosts />
+        <div>
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
+            <MyPostsContainer/>
         </div>
     );
 };
