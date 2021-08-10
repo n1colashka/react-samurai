@@ -2,6 +2,7 @@ import React from "react";
 import { Field, Form, Formik } from "formik";
 import styles from "./ProfileStatus.module.css";
 import * as yup from "yup";
+import { useState } from "react";
 
 const ProfileStatusForm = (props) => {
     const validationSchema = yup.object().shape({
@@ -16,20 +17,9 @@ const ProfileStatusForm = (props) => {
             validateOnBlur
             validationSchema={validationSchema}
         >
-            {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting,
-                isValid,
-                dirty,
+            {({ values, errors, touched, handleChange,
                 isInvalid = touched.login && errors.login && `${styles.invalid} invalid`,
-                deactivateEditMode = () =>
-                    props.deactivateEditMode(values.status),
-            }) => {
+                deactivateEditMode = () => props.deactivateEditMode(values.status) }) => {
                 return (
                     <Form>
                         <Field
@@ -48,6 +38,32 @@ const ProfileStatusForm = (props) => {
         </Formik>
     );
 };
+
+const ProfileStatusHook = () => {
+    const [editMode, setEditMode] = useState(false);
+    const [status, setStatus] = useState("");
+
+    const activateEditMode = () => setEditMode(true);
+
+    const deactivateEditMode = (status) => {
+        setEditMode(false);
+        setStatus(status);
+    }
+
+        return (
+            <div className={styles.statusWrapper}>
+                <div className={styles.statusCaption}>Status:</div>
+                    {this.state.editMode &&
+                        (<div className={styles.statusContent}>
+                            <ProfileStatusForm status={status} deactivateEditMode={deactivateEditMode}/>
+                        </div>)}
+                    {!this.state.editMode &&
+                        (<div className={styles.statusContent} onDoubleClick={activateEditMode}>
+                            {status || "No status"}
+                        </div>)}
+            </div>
+        );
+}
 
 class ProfileStatus extends React.Component {
     state = {
