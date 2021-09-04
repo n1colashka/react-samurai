@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/react-samurai/static/css/main.1c6dd360.chunk.css",
+    "main.js": "/react-samurai/static/js/main.02a0ac33.chunk.js",
+    "main.js.map": "/react-samurai/static/js/main.02a0ac33.chunk.js.map",
+    "runtime-main.js": "/react-samurai/static/js/runtime-main.fcf6dbb9.js",
+    "runtime-main.js.map": "/react-samurai/static/js/runtime-main.fcf6dbb9.js.map",
+    "static/css/2.0978f8b3.chunk.css": "/react-samurai/static/css/2.0978f8b3.chunk.css",
+    "static/js/2.c18b4045.chunk.js": "/react-samurai/static/js/2.c18b4045.chunk.js",
+    "static/js/2.c18b4045.chunk.js.map": "/react-samurai/static/js/2.c18b4045.chunk.js.map",
+    "static/css/3.ed142ba0.chunk.css": "/react-samurai/static/css/3.ed142ba0.chunk.css",
+    "static/js/3.f76f2aaa.chunk.js": "/react-samurai/static/js/3.f76f2aaa.chunk.js",
+    "static/js/3.f76f2aaa.chunk.js.map": "/react-samurai/static/js/3.f76f2aaa.chunk.js.map",
+    "static/css/4.7b75d76b.chunk.css": "/react-samurai/static/css/4.7b75d76b.chunk.css",
+    "static/js/4.6fb9cf81.chunk.js": "/react-samurai/static/js/4.6fb9cf81.chunk.js",
+    "static/js/4.6fb9cf81.chunk.js.map": "/react-samurai/static/js/4.6fb9cf81.chunk.js.map",
+    "static/js/5.a7d50a38.chunk.js": "/react-samurai/static/js/5.a7d50a38.chunk.js",
+    "static/js/5.a7d50a38.chunk.js.map": "/react-samurai/static/js/5.a7d50a38.chunk.js.map",
+    "index.html": "/react-samurai/index.html",
+    "static/css/2.0978f8b3.chunk.css.map": "/react-samurai/static/css/2.0978f8b3.chunk.css.map",
+    "static/css/3.ed142ba0.chunk.css.map": "/react-samurai/static/css/3.ed142ba0.chunk.css.map",
+    "static/css/4.7b75d76b.chunk.css.map": "/react-samurai/static/css/4.7b75d76b.chunk.css.map",
+    "static/css/main.1c6dd360.chunk.css.map": "/react-samurai/static/css/main.1c6dd360.chunk.css.map",
+    "static/js/2.c18b4045.chunk.js.LICENSE.txt": "/react-samurai/static/js/2.c18b4045.chunk.js.LICENSE.txt",
+    "static/media/like.a9865e21.svg": "/react-samurai/static/media/like.a9865e21.svg",
+    "static/media/logo.97fbc9d5.png": "/react-samurai/static/media/logo.97fbc9d5.png",
+    "static/media/preloader.6aaff771.svg": "/react-samurai/static/media/preloader.6aaff771.svg",
+    "static/media/user.e492f96c.png": "/react-samurai/static/media/user.e492f96c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fcf6dbb9.js",
+    "static/css/2.0978f8b3.chunk.css",
+    "static/js/2.c18b4045.chunk.js",
+    "static/css/main.1c6dd360.chunk.css",
+    "static/js/main.02a0ac33.chunk.js"
+  ]
+}
