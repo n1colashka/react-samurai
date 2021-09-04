@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import {HashRouter, Route} from "react-router-dom";
 import "./App.css";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import News from "./components/News/News";
@@ -56,11 +56,11 @@ const AppContainer = connect(mapStateToProps, {initializeApp})(App);
 
 const SamuraiJSApp = (props) => {
     return (
-        <BrowserRouter baseneme={process.env.PUBLIC_URL}>
+        <HashRouter baseneme={process.env.PUBLIC_URL}>
             <Provider store={store}>
                 <AppContainer sidebar={store.getState().sidebar} />
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
