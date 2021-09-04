@@ -56,7 +56,7 @@ const AppContainer = connect(mapStateToProps, {initializeApp})(App);
 
 const SamuraiJSApp = (props) => {
     return (
-        <BrowserRouter>
+        <BrowserRouter baseneme={process.env.PUBLIC_URL}>
             <Provider store={store}>
                 <AppContainer sidebar={store.getState().sidebar} />
             </Provider>
