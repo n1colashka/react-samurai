@@ -1,7 +1,7 @@
 import { authAPI } from "../api/api";
 
-const SET_USER_DATA = "SET-USER-DATA";
-const SET_AUTH_STATUS = "SET-AUTH-STATUS";
+const SET_USER_DATA = "auth/SET-USER-DATA";
+const SET_AUTH_STATUS = "auth/SET-AUTH-STATUS";
 
 let initialState = {
     userId: null,
@@ -49,33 +49,30 @@ export const setAuthStatus = message => {
     }
 }
 
-export const getAuthUserData = () => (dispatch) => {
-    return authAPI.getAuthUserData().then(data => {
-        if (data.resultCode === 0) {
-            const { id, email, login } = data.data;
-            dispatch(setAuthUserData(id, email, login, true));
-        }
-    });
+export const getAuthUserData = () => async (dispatch) => {
+    const response = await authAPI.getAuthUserData();
+
+    if (response.resultCode === 0) {
+        const { id, email, login } = response.data;
+        dispatch(setAuthUserData(id, email, login, true));
+    }
 };
 
-export const login = (email, password, rememberMe, setSubmitting) => (dispatch) => {
-    authAPI.login(email, password, rememberMe).then(data => {
-        setSubmitting(true);
-        if (data.resultCode === 0) {
-            dispatch(getAuthUserData());
-        } else {
-            console.log(data.messages[0]);
-            dispatch(setAuthStatus(data.messages[0]))
-        }
-    });
+export const login = (email, password, rememberMe, setSubmitting) => async (dispatch) => {
+    const response = await authAPI.login(email, password, rememberMe);
+
+    setSubmitting(true);
+    if (response.data.resultCode === 0)
+        dispatch(getAuthUserData());
+    else
+        dispatch(setAuthStatus(response.data.messages[0]))
 };
 
-export const logout = () => (dispatch) => {
-    authAPI.logout().then((data) => {
-        if (data.resultCode === 0) {
+export const logout = () => async (dispatch) => {
+    const response = await authAPI.logout();
+        if (response.data.resultCode === 0) {
             dispatch(setAuthUserData(null, null, null, false));
         }
-    });
 };
 
 export default authReducer;

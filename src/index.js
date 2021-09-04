@@ -2,18 +2,14 @@ import reportWebVitals from "./reportWebVitals";
 import store from "./redux/redux-store";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./index.css";
 import "reset-css";
+import SamuraiJSApp from "./App";
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Provider store={store}>
-            <App sidebar={store.getState().sidebar} />
-        </Provider>
-    </BrowserRouter>,
+    <SamuraiJSApp />,
     document.getElementById("root")
 );
 

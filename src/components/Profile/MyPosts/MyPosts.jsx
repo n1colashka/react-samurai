@@ -3,9 +3,8 @@ import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import PostsForm from "./PostsForm/PostsForm";
 
-const MyPosts = (props) => {
-
-    const postsItems = props.posts.map(post => <Post message={post.text} key={post.id} likesCount={post.likesCount} />);
+const MyPosts = React.memo(props => {
+    const postsItems = props.posts.map(post => <Post message={post.text} key={post.id} likesCount={post.likesCount}/>);
 
     return (
         <div className={styles.posts}>
@@ -14,10 +13,10 @@ const MyPosts = (props) => {
                 <PostsForm addPost={props.addPost}/>
             </div>
             <ul className={styles.list}>
-                { postsItems }
+                {postsItems}
             </ul>
         </div>
     );
-};
+});
 
 export default MyPosts;

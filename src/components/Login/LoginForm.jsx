@@ -19,7 +19,6 @@ const LoginForm = (props) => {
     });
     const login = (values, onSubmitProps) => {
         props.login(values.email, values.password, values.rememberMe, onSubmitProps.setSubmitting);
-        console.log(props);
     }
     
     return (
@@ -35,8 +34,6 @@ const LoginForm = (props) => {
                 touched,
                 handleChange,
                 handleBlur,
-                handleSubmit,
-                isSubmitting,
                 isValid,
                 dirty,
                 isInvalidEmail = touched.email && errors.email && `${styles.invalid} invalid`,
